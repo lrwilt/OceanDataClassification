@@ -37,3 +37,12 @@ maplatlon <- get_map(location = c(lon = mean(latlon$lon)+10, lat = mean(latlon$l
 ggmap(mapscrippsGliderData2) +
   geom_point(data = latlon, aes(x = lon, y = lat, fill = "red", alpha = 0.8), size = 1, shape = 21) +
   guides(fill=FALSE, alpha=FALSE, size=FALSE)
+
+#Plot Temperature and Conductivity
+plot(scrippsGlidersData2$temperature,scrippsGlidersData2$conductivity)
+
+#Plot Depth and Salinity
+plot(scrippsGlidersData2$depth,scrippsGlidersData2$salinity)
+
+#Plot Pressure and Conductivity
+plot(scrippsGlidersData2$pressure,scrippsGlidersData2$conductivity)
